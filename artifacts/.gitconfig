@@ -1,0 +1,11 @@
+[alias]
+	hs = log --pretty='%C(yellow)%h %C(cyan)%ad %Cblue%an%C(auto)%d %Creset%s' --date=relative --date-order --graph
+  msg = "!f() { git log --format=%B -n \"$1^\" | sed '/^$/d'; }; f"
+  st = diff --staged
+  ld = "!f() { git diff $(git remote show origin | sed -n '/HEAD branch/s/.*: //p')...HEAD;}; f"
+  ap = "!f() { git add . -N && git add -p $1; }; f"
+[core]
+	editor = nvim
+	pager = git-split-diffs --color | less -RFX
+[branch]
+  sort = -committerdate
