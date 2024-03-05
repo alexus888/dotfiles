@@ -45,7 +45,7 @@ def main():
 
 def configs():
     now = datetime.now()
-    filenames = [".zshrc", ".gitconfig"]
+    filenames = [".zshrc", ".gitconfig", ".pythonstartup"]
     for filename in filenames:
         bak = join(HOME_DIR, f"{filename}.{now}.bak")
         old = join(HOME_DIR, filename)
@@ -159,6 +159,7 @@ def python(arguments: Namespace):
         )
         run(f"pyenv install {python_version} --skip-existing")
         run(f"pyenv global {arguments.python_version}")
+    run("pip install rich")
 
 
 def run_multiple(commands):

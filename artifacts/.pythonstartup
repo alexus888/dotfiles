@@ -1,0 +1,12 @@
+try:
+    from rich import pretty, traceback, inspect
+
+    pretty.install()
+    traceback.install(show_locals=False)
+
+    print("Loaded `rich` module nice-to-haves :)")
+    inspect(inspect)
+
+except ModuleNotFoundError:
+    print("The `rich` module not found, skipping nice-to-haves...")
+    print("Run [pip|poetry|whatever] install command for `rich` to get the nice stuff.")

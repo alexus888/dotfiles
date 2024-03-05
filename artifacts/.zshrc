@@ -10,6 +10,9 @@ eval "$(pyenv init -)"
 # NOTE: this is virtualenv auto-activate magic, but I don't want that so this is a reminder why.
 # eval "$(pyenv virtualenv-init -)"  
 
+# Python REPL
+export PYTHONSTARTUP=$HOME/.pythonstartup
+
 # aliases
 alias help="cat ~/.zshrc | grep 'alias'"
 alias python="python3"
