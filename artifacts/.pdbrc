@@ -1,0 +1,4 @@
+from os.path import expanduser
+
+file = expanduser("~/.pythonstartup")
+exec(open(file).read())

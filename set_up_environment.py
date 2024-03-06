@@ -45,7 +45,7 @@ def main():
 
 def configs():
     now = datetime.now()
-    filenames = [".zshrc", ".gitconfig", ".pythonstartup"]
+    filenames = [".zshrc", ".gitconfig", ".pythonstartup", ".pdbrc"]
     for filename in filenames:
         bak = join(HOME_DIR, f"{filename}.{now}.bak")
         old = join(HOME_DIR, filename)
