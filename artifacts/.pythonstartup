@@ -1,3 +1,9 @@
+import sys
+
+# Quietly hook into global 3.12 install so I don't have to keep installing rich per virtualenv.
+print("Appending base 3.12.1 install to path...")
+sys.path.append("/Users/awong/.pyenv/versions/3.12.1/lib/python3.12/site-packages/")
+
 try:
     from rich import pretty, traceback, inspect
 
