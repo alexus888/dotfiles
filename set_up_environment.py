@@ -159,7 +159,8 @@ def python(arguments: Namespace):
         )
         run(f"pyenv install {python_version} --skip-existing")
         run(f"pyenv global {arguments.python_version}")
-    run("pip install rich")
+        run("pip install --upgrade pip")
+        run("pip install rich")
 
 
 def run_multiple(commands):
